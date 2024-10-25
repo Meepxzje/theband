@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+  height: 46px;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav > li {
+  display: inline-block;
+  position: relative;
+}
+
+#nav li {
+}
+
+#nav > li > a {
+  line-height: 46px;
+  padding: 0 24px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+#nav .subnav {
+  display: none;
+  position: absolute;
+  color: #333;
+  background-color: #ccc;
+  list-style-type: none;
+  box-shadow: 0 0 10px rbga(0, 0, 0, 0.3);
+}
+
+.subnav > li > a {
+  line-height: 46px;
+  padding: 0 24px;
+  text-decoration: none;
+  background-color: #fff;
+  color: black;
+  display: block;
+}
+#nav > li:hover > a {
+  background-color: #ccc;
+  color: #333;
+  display: block;
+}
+.subnav > li:hover > a {
+  background-color: #ccc;
+}
+#nav .nav-arrow-down {
+  font-size: 10px;
+}
+#header .search-btn {
+  float: right;
+  padding: 0 21px;
+}
+#header .search-btn:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+#header .search-icon {
+  color: #fff;
+  font-size: 20px;
+  line-height: 46px;
+}
+#slider {
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url(/assets/img/slider/slider1.jpg) no-repeat center / cover;
+  position: relative;
+}
+
+.text-content {
+  position: absolute;
+  bottom: 47px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#slider .text-heading {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+#slider .text-decription {
+  font-size: 15px;
+}
+
+#content {
+  height: 1500px;
+  background-color: #ccc;
+}
+
+#content .content-section {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 0;
+}
+
+#content .section-heading {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+  font-size: 15px;
+  text-align: center;
+  margin: 25px 0;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+#content .about-text {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#content .member-list {
+  margin-top: 48px;
+  overflow: hidden;
+}
+
+.clear {
+  clear: both;
+}
+#content .member-item {
+  float: left;
+  width: calc(100%/3);
+  text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+
+}
+#content .member-img{
+  width: 154px;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
