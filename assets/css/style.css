@@ -27,9 +27,6 @@ html {
   position: relative;
 }
 
-#nav li {
-}
-
 #nav > li > a {
   line-height: 46px;
   padding: 0 24px;
@@ -264,9 +261,18 @@ html {
   display: none;
   align-items: center;
   justify-content: center;
+
 }
 
-.modal.open{
+/* contact */
+
+.contact-section {
+  padding: 32px 0;
+}
+
+/* end-contact */
+
+.modal.open {
   display: flex;
 }
 
@@ -277,6 +283,7 @@ html {
   min-height: 200px;
   z-index: 1;
   position: relative;
+  animation: modalFadeIn ease 0.5s;
 }
 
 .modal-header {
@@ -351,4 +358,13 @@ html {
   color: blue;
 }
 
-
+@keyframes modalFadeIn {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
