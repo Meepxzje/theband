@@ -88,19 +88,141 @@
             <div class="clear"></div>
           </div>
         </div>
+        <div class="tour-section">
+          <div class="content-section">
+            <h2 class="section-heading text-white">TOUR DATES</h2>
+            <p class="section-sub-heading text-white">
+              Remember to book your tickets!
+            </p>
+            <!-- Ticket -->
+            <ul class="tickets-list">
+              <li>September <span class="sold-out">Sold out</span></li>
+              <li>October <span class="sold-out">Sold out</span></li>
+              <li>November <span class="quantity text-white">3</span></li>
+            </ul>
 
-        <div class="content-section">
-          <h2 class="section-heading">TOUR DATES</h2>
-          <p class="section-sub-heading">Remember to book your tickets!</p>
+            <!-- Places -->
+            <div class="places-list">
+              <div class="place-item">
+                <img
+                  src="./assets/img/newyork.jpg"
+                  alt="newyork"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <div class="place-heading">New York</div>
+                  <p class="place-time">Fri 27 Nov 2016</p>
+                  <p class="place-desc">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button href="#" class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="place-item">
+                <img
+                  src="./assets/img/paris.jpg"
+                  alt="newyork"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <div class="place-heading">Paris</div>
+                  <p class="place-time">Sat 28 Nov 2016</p>
+                  <p class="place-desc">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button href="#" class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+
+              <div class="place-item">
+                <img
+                  src="./assets/img/sanfran.jpg"
+                  alt="newyork"
+                  class="place-img"
+                />
+                <div class="place-body">
+                  <div class="place-heading">San Francisco</div>
+                  <p class="place-time">Sun 29 Nov 2016</p>
+                  <p class="place-desc">
+                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                  </p>
+                  <button href="#" class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
         </div>
-
         <div class="content-section">
-          <h2 class="section-heading">CONTACTz</h2>
+          <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
         </div>
       </div>
-
       <div id="footer"></div>
     </div>
+
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-close"><i class="ti-close"></i></div>
+        <header class="modal-header">
+          <i class="modal-heading-icon ti-bag"> </i>
+          Tikects
+        </header>
+        <div class="modal-body">
+          <label for="ticket-quantity" class="modal-label">
+            <i class="ti-shopping-cart"></i>
+            Tickets, $15 per person
+          </label>
+          <input
+            type="text"
+            id="ticket-quantity"
+            class="modal-input"
+            placeholder="How many?"
+          />
+          <label for="email" class="modal-label">
+            <i class="ti-user"></i>
+            Send To
+          </label>
+          <input
+            type="text"
+            id="email"
+            class="modal-input"
+            placeholder="Enter Email ..."
+          />
+          <button id="buy-ticket">
+            PAYS
+            <i class="ti-check"></i>
+          </button>
+        </div>
+        <footer class="modal-footer">
+          <p class="modal-help">Need <a href="#">help?</a></p>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      const buyBtns = document.querySelectorAll(".js-buy-ticket");
+      const modal = document.querySelector(".modal");
+
+      const close = document.querySelector(".modal-close");
+
+      close.addEventListener("click", () => {
+        modal.classList.remove("open");
+      });
+
+      function showBuyTicket() {
+        modal.classList.add("open");
+      }
+      for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener("click", showBuyTicket);
+      }
+    </script>
   </body>
 </html>
