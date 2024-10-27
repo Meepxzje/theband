@@ -6,6 +6,8 @@
 
 html {
   font-family: Arial, Helvetica, sans-serif;
+
+  scroll-behavior: smooth;
 }
 
 /* Common */
@@ -22,9 +24,14 @@ html {
   text-align: center !important;
 }
 
+.pull-right {
+  float: right !important;
+}
+
 .row {
   margin-right: -8px;
   margin-left: -8px;
+  overflow: hidden;
 }
 
 .row::after {
@@ -58,7 +65,26 @@ html {
 .mt-16 {
   margin-top: 16px !important;
 }
+
+.btn {
+  margin-top: 15px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  border: none;
+}
+.btn:hover {
+  color: #000;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
 /* Main */
+
+#main {
+}
 
 #header {
   height: 46px;
@@ -159,7 +185,6 @@ html {
 }
 
 #content {
-  height: 1500px;
   background-color: #fff;
 }
 
@@ -167,7 +192,7 @@ html {
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 0;
+  padding: 64px 0 112px;
 }
 
 #content .section-heading {
@@ -252,11 +277,7 @@ html {
   margin: 32px -8px 0 -8px;
   padding-bottom: 32px;
 }
-.place-item {
-  float: left;
-  width: calc(100% / 3);
-  padding: 0 8px;
-}
+
 .place-img {
   width: 100%;
   display: block;
@@ -281,19 +302,6 @@ html {
 .place-desc {
   margin-top: 15px;
   line-height: 1.4;
-}
-.place-buy-btn {
-  margin-top: 15px;
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-  padding: 11px 16px;
-  display: inline-block;
-  border: none;
-}
-.place-buy-btn:hover {
-  color: #000;
-  background-color: #ccc;
 }
 
 .modal {
@@ -407,32 +415,27 @@ html {
   margin-top: 48px;
 }
 
-
-.contact-info{
+.contact-info {
   font-size: 18px;
   list-style-type: none;
   line-height: 1.4;
 }
 
-.contact-info i[class*=ti-] {
+.contact-info i[class*="ti-"] {
   width: 30px;
   display: inline-block;
-
 }
 
-
-.contact-form
-{
+.contact-form {
   font-size: 15px;
 }
 
-.contact-form .form-control{
+.contact-form .form-control {
   border: 1px solid #ccc;
   height: 40px;
   padding: 10px;
   width: 100%;
 }
-
 
 .contact-form .form-submit-btn {
   background-color: #000;
@@ -442,6 +445,38 @@ html {
   float: right;
 }
 
+.map-section img {
+  width: 100%;
+  filter: grayscale(50%);
+}
+
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .socials-list {
+  font-size: 24px;
+}
+
+#footer .socials-list a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .socials-list a:hover,
+#footer .coppy-right a:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .coppy-right {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .coppy-right a {
+  color: rgba(0, 0, 0, 0.6);
+}
 
 @keyframes modalFadeIn {
   from {
