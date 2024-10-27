@@ -61,7 +61,7 @@
           </p>
 
           <div class="member-list">
-            <div class="member-item">
+            <div class="col col-3 text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -69,7 +69,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item">
+            <div class="col col-3 text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -77,7 +77,7 @@
                 class="member-img"
               />
             </div>
-            <div class="member-item">
+            <div class="col col-3 text-center">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -85,7 +85,6 @@
                 class="member-img"
               />
             </div>
-            <div class="clear"></div>
           </div>
         </div>
         <div class="tour-section">
@@ -102,8 +101,8 @@
             </ul>
 
             <!-- Places -->
-            <div class="places-list">
-              <div class="place-item">
+            <div class="row places-list">
+              <div class="col col-3">
                 <img
                   src="./assets/img/newyork.jpg"
                   alt="newyork"
@@ -121,7 +120,7 @@
                 </div>
               </div>
 
-              <div class="place-item">
+              <div class="col col-3">
                 <img
                   src="./assets/img/paris.jpg"
                   alt="newyork"
@@ -139,7 +138,7 @@
                 </div>
               </div>
 
-              <div class="place-item">
+              <div class="col col-3">
                 <img
                   src="./assets/img/sanfran.jpg"
                   alt="newyork"
@@ -156,26 +155,57 @@
                   </button>
                 </div>
               </div>
-              <div class="clear"></div>
             </div>
           </div>
         </div>
         <div class="content-section">
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
-          <div class="contact-section">
-            <div class="contact-info">
+
+          <div class="row contact-content">
+            <div class="col col-2 contact-info">
               <li><i class="ti-location-pin"></i> Chicagos, US</li>
-              <li>
-                <i class="ti-headphone-alt"> Phone: +00 151515</i>
-              </li>
+              <li><i class="ti-headphone-alt"></i> Phone: +00 151515</li>
               <li><i class="ti-email"></i> Email: mail@mail.com</li>
             </div>
-            <div class="contact-form">
-              <input type="text" class="contact-name" />
-              <input type="text" class="contact-email" />
-              <input type="text" class="contact-massege" />
-              <button class="btn-contact-send">Send</button>
+            <div class="col col-2 contact-form">
+              <form action="">
+                <div class="row ">
+                  <div class="col col-2">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Name"
+                      id="contact-name"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                  <div class="col col-2">
+                    <input
+                      type="email"
+                      name=""
+                      placeholder="Email"
+                      id="contact-email"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row mt-8">
+                  <div class="col col-full">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Message"
+                      id="contact-message"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <input class="form-submit-btn mt-16" type="submit" value="SEND" />
+              </form>
             </div>
           </div>
         </div>
